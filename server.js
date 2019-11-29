@@ -1,9 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
+const apiRouter = require('./routes/apiRouter.js');
+
 const app = express();
 
 app.use(express.json());
+
+app.use('/api', apiRouter);
 
 //DB Config
 
